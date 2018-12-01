@@ -1,0 +1,29 @@
+Command line:
+   partialproduct_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  10347
+
+Thu Nov 01 21:12:44 2018
+
+
+ Elaboration Time: 0.203125 sec
+
+ Current Memory Usage: 5983 Meg
+
+ Total Signals          : 15
+ Total Nets             : 28
+ Total Signal Drivers   : 6
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 8
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 116
+Total Line Count : 33
+
+ Total Simulation Time: 0.203125 sec
+
+ Current Memory Usage: 5982.96 Meg
+
+Thu Nov 01 21:13:17 2018
+

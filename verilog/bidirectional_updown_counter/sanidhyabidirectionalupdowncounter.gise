@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="sanidhyabidirectionalupdowncounter.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="bidirectionalupdowncounter.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="bidirectionalupdowncounter.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="bidirectionalupdowncounter.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="bidirectionalupdowncounter.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="bidirectionalupdowncounter.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="bidirectionalupdowncounter.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="bidirectionalupdowncounter.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="bidirectionalupdowncounter.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="bidirectionalupdowncounter.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="bidirectionalupdowncounter.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bidirectionalupdowncounter.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="bidirectionalupdowncounter.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="bidirectionalupdowncounter.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="bidirectionalupdowncounter.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="bidirectionalupdowncounter.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="bidirectionalupdowncounter.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="bidirectionalupdowncounter.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="bidirectionalupdowncounter.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="bidirectionalupdowncounter.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bidirectionalupdowncounter_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="bidirectionalupdowncounter_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="bidirectionalupdowncounter_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="bidirectionalupdowncounter_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="bidirectionalupdowncounter_isim_beh.wdb"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="bidirectionalupdowncounter_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="bidirectionalupdowncounter_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="bidirectionalupdowncounter_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="bidirectionalupdowncounter_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="bidirectionalupdowncounter_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="bidirectionalupdowncounter_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="bidirectionalupdowncounter_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="bidirectionalupdowncounter_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="bidirectionalupdowncounter_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="bidirectionalupdowncounter_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="bidirectionalupdowncounter_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="bidirectionalupdowncounter_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="bidirectionalupdowncounter_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="sanidhyaupdown_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1542643743" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1542643743">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1542652658" xil_pn:in_ck="-1354230237632092593" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1542652658">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="bidirectionalcounter.v"/>
+      <outfile xil_pn:name="sanidhyaupdown.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1542652658" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="205496876104081261" xil_pn:start_ts="1542652658">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1542652658" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7896753448508811627" xil_pn:start_ts="1542652658">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1542643743" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6237811065670991866" xil_pn:start_ts="1542643743">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1542652658" xil_pn:in_ck="-1354230237632092593" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1542652658">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="bidirectionalcounter.v"/>
+      <outfile xil_pn:name="sanidhyaupdown.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1542652662" xil_pn:in_ck="-1354230237632092593" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1122507795484105417" xil_pn:start_ts="1542652658">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_beh.prj"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1542706992" xil_pn:in_ck="318535724382068034" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5294449208413959866" xil_pn:start_ts="1542706991">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+    <transform xil_pn:end_ts="1542643141" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1542643141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1542643141" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="4745480144501835925" xil_pn:start_ts="1542643141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1542643141" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6237811065670991866" xil_pn:start_ts="1542643141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1542643141" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1542643141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1542643141" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="205496876104081261" xil_pn:start_ts="1542643141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1542643141" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="4579864356909105523" xil_pn:start_ts="1542643141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1542643141" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-7402418829144269948" xil_pn:start_ts="1542643141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1542652640" xil_pn:in_ck="-7960532772359534275" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5083029035953930761" xil_pn:start_ts="1542652629">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name=".lso"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.lso"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.ngc"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.ngr"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.prj"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.stx"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.syr"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.xst"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1542643603" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="7541936581902416536" xil_pn:start_ts="1542643603">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1542643613" xil_pn:in_ck="-1082951525079209316" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-830833993014526585" xil_pn:start_ts="1542643603">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.bld"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.ngd"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1542643624" xil_pn:in_ck="-1082951525079209315" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5706167834589782188" xil_pn:start_ts="1542643613">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.pcf"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_map.map"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_map.mrp"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_map.ncd"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_map.ngm"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_map.xrpt"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_summary.xml"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1542643655" xil_pn:in_ck="4260328432205987894" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="6973808786348774276" xil_pn:start_ts="1542643624">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.ncd"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.pad"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.par"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.ptwx"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.unroutes"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.xpi"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_pad.csv"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_pad.txt"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1542643655" xil_pn:in_ck="-1082951525079209447" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1542643649">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.twr"/>
+      <outfile xil_pn:name="bidirectionalupdowncounter.twx"/>
+    </transform>
+  </transforms>
+
+</generated_project>

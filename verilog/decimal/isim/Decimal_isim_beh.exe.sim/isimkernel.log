@@ -1,0 +1,29 @@
+Command line:
+   Decimal_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  5600
+
+Tue Nov 20 15:33:23 2018
+
+
+ Elaboration Time: 0.265625 sec
+
+ Current Memory Usage: 5826.2 Meg
+
+ Total Signals          : 16
+ Total Nets             : 27
+ Total Signal Drivers   : 7
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 9
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 117
+Total Line Count : 25
+
+ Total Simulation Time: 0.265625 sec
+
+ Current Memory Usage: 5197.01 Meg
+
+Tue Nov 20 15:36:34 2018
+

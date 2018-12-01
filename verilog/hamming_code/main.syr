@@ -1,0 +1,527 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc3s700a-4-fg484
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "main.v" in library work
+Module <main> compiled
+Module <count> compiled
+Module <error_detect> compiled
+No errors in compilation
+Analysis of file <"main.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <main> in library <work>.
+
+Analyzing hierarchy for module <count> in library <work>.
+
+Analyzing hierarchy for module <error_detect> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <main>.
+Module <main> is correct for synthesis.
+ 
+Analyzing module <count> in library <work>.
+Module <count> is correct for synthesis.
+ 
+Analyzing module <error_detect> in library <work>.
+WARNING:Xst:905 - "main.v" line 111: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <p1x>, <p2>, <p2x>, <p3>, <p3x>, <p4>, <p4x>
+Module <error_detect> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <count>.
+    Related source file is "main.v".
+WARNING:Xst:1872 - Variable <m> is used but never assigned.
+WARNING:Xst:646 - Signal <j> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <out>.
+    Found 32-bit up counter for signal <i>.
+    Found 3-bit comparator greatequal for signal <i$cmp_ge0000> created at line 76.
+    Found 3-bit register for signal <k>.
+    Found 32-bit adder for signal <old_i_2$addsub0000> created at line 79.
+    Found 3-bit adder for signal <old_k_1$addsub0000> created at line 80.
+    Found 6-bit register for signal <stor>.
+    Found 3-bit comparator less for signal <stor$cmp_lt0000> created at line 76.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  10 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <count> synthesized.
+
+
+Synthesizing Unit <error_detect>.
+    Related source file is "main.v".
+WARNING:Xst:1780 - Signal <num1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <num> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+    Using one-hot encoding for signal <num>.
+    Found 12-bit register for signal <k>.
+    Found 4-bit adder for signal <bit_error$addsub0000> created at line 119.
+    Found 5-bit comparator not equal for signal <bit_error$cmp_ne0000> created at line 118.
+    Found 4-bit adder for signal <old_bit_error_3$addsub0000> created at line 113.
+    Found 6-bit comparator not equal for signal <old_bit_error_3$cmp_ne0000> created at line 112.
+    Found 4-bit adder for signal <old_bit_error_4$addsub0000> created at line 115.
+    Found 6-bit comparator not equal for signal <old_bit_error_4$cmp_ne0000> created at line 114.
+    Found 4-bit adder for signal <old_bit_error_5$addsub0000> created at line 117.
+    Found 5-bit comparator not equal for signal <old_bit_error_5$cmp_ne0000> created at line 116.
+    Found 6-bit register for signal <p1x>.
+    Found 6-bit register for signal <p2x>.
+    Found 5-bit register for signal <p3x>.
+    Found 5-bit register for signal <p4x>.
+    Summary:
+	inferred  34 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <error_detect> synthesized.
+
+
+Synthesizing Unit <main>.
+    Related source file is "main.v".
+WARNING:Xst:647 - Input <data> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <noise> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 12-bit register for signal <copy1>.
+    Found 32-bit register for signal <i>.
+    Found 6-bit register for signal <p1>.
+    Found 6-bit register for signal <p2>.
+    Found 5-bit register for signal <p3>.
+    Found 5-bit register for signal <p4>.
+    Summary:
+	inferred  66 D-type flip-flop(s).
+Unit <main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 12
+ 3-bit adder                                           : 4
+ 32-bit adder                                          : 4
+ 4-bit adder                                           : 4
+# Counters                                             : 4
+ 32-bit up counter                                     : 4
+# Registers                                            : 34
+ 1-bit register                                        : 16
+ 12-bit register                                       : 1
+ 3-bit register                                        : 4
+ 32-bit register                                       : 1
+ 5-bit register                                        : 4
+ 6-bit register                                        : 8
+# Comparators                                          : 12
+ 3-bit comparator greatequal                           : 4
+ 3-bit comparator less                                 : 4
+ 5-bit comparator not equal                            : 2
+ 6-bit comparator not equal                            : 2
+# Multiplexers                                         : 4
+ 32-bit 4-to-1 multiplexer                             : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <k_3> in Unit <err> is equivalent to the following 2 FFs/Latches, which will be removed : <p1x_1> <p4x_3> 
+INFO:Xst:2261 - The FF/Latch <k_4> in Unit <err> is equivalent to the following FF/Latch, which will be removed : <p4x_4> 
+INFO:Xst:2261 - The FF/Latch <k_5> in Unit <err> is equivalent to the following 3 FFs/Latches, which will be removed : <p3x_1> <p1x_2> <p2x_2> 
+INFO:Xst:2261 - The FF/Latch <k_6> in Unit <err> is equivalent to the following 2 FFs/Latches, which will be removed : <p3x_2> <p2x_3> 
+INFO:Xst:2261 - The FF/Latch <k_7> in Unit <err> is equivalent to the following 2 FFs/Latches, which will be removed : <p3x_3> <p1x_3> 
+INFO:Xst:2261 - The FF/Latch <k_8> in Unit <err> is equivalent to the following FF/Latch, which will be removed : <p3x_4> 
+INFO:Xst:2261 - The FF/Latch <k_9> in Unit <err> is equivalent to the following 2 FFs/Latches, which will be removed : <p1x_4> <p2x_4> 
+INFO:Xst:2261 - The FF/Latch <k_10> in Unit <err> is equivalent to the following FF/Latch, which will be removed : <p2x_5> 
+INFO:Xst:2261 - The FF/Latch <k_11> in Unit <err> is equivalent to the following FF/Latch, which will be removed : <p1x_5> 
+INFO:Xst:2261 - The FF/Latch <k_0> in Unit <err> is equivalent to the following 2 FFs/Latches, which will be removed : <p3x_0> <p4x_0> 
+INFO:Xst:2261 - The FF/Latch <k_1> in Unit <err> is equivalent to the following 3 FFs/Latches, which will be removed : <p1x_0> <p2x_0> <p4x_1> 
+INFO:Xst:2261 - The FF/Latch <k_2> in Unit <err> is equivalent to the following 2 FFs/Latches, which will be removed : <p2x_1> <p4x_2> 
+WARNING:Xst:1426 - The value init of the FF/Latch i_0 hinder the constant cleaning in the block main.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch i_1 hinder the constant cleaning in the block main.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <k_1> (without init value) has a constant value of 0 in block <err>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <k_2> (without init value) has a constant value of 0 in block <err>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <k_0> (without init value) has a constant value of 1 in block <err>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <k_4> (without init value) has a constant value of 0 in block <err>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <k_5> (without init value) has a constant value of 0 in block <err>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <k_3> (without init value) has a constant value of 0 in block <err>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <k_7> (without init value) has a constant value of 0 in block <err>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <k_8> (without init value) has a constant value of 0 in block <err>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <k_6> (without init value) has a constant value of 0 in block <err>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <k_10> (without init value) has a constant value of 0 in block <err>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <k_11> (without init value) has a constant value of 0 in block <err>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <k_9> (without init value) has a constant value of 0 in block <err>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <stor_0> (without init value) has a constant value of 0 in block <c4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <stor_0> (without init value) has a constant value of 0 in block <c3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <stor_0> (without init value) has a constant value of 0 in block <c2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <stor_0> (without init value) has a constant value of 0 in block <c1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_17> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_18> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_19> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_20> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_21> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_22> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_23> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_24> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_25> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_26> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_27> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_28> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_29> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_30> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_31> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_16> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_15> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_14> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_13> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_12> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_11> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_10> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_9> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_8> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_7> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_6> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_5> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_4> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_3> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_2> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 12
+ 3-bit adder                                           : 4
+ 32-bit adder                                          : 4
+ 4-bit adder                                           : 4
+# Counters                                             : 4
+ 32-bit up counter                                     : 4
+# Registers                                            : 140
+ Flip-Flops                                            : 140
+# Comparators                                          : 12
+ 3-bit comparator greatequal                           : 4
+ 3-bit comparator less                                 : 4
+ 5-bit comparator not equal                            : 2
+ 6-bit comparator not equal                            : 2
+# Multiplexers                                         : 4
+ 32-bit 4-to-1 multiplexer                             : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <stor_0> (without init value) has a constant value of 0 in block <count>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <k_9> (without init value) has a constant value of 0 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <k_11> (without init value) has a constant value of 0 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <k_10> (without init value) has a constant value of 0 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <k_6> (without init value) has a constant value of 0 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <k_8> (without init value) has a constant value of 0 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <k_7> (without init value) has a constant value of 0 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <k_3> (without init value) has a constant value of 0 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <k_5> (without init value) has a constant value of 0 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <k_4> (without init value) has a constant value of 0 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <k_0> (without init value) has a constant value of 1 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <k_2> (without init value) has a constant value of 0 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <k_1> (without init value) has a constant value of 0 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <p3x_0> (without init value) has a constant value of 1 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <p4x_0> (without init value) has a constant value of 1 in block <error_detect>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch i_0 hinder the constant cleaning in the block main.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch i_1 hinder the constant cleaning in the block main.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <i_31> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_30> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_29> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_28> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_27> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_26> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_25> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_24> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_23> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_22> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_21> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_20> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_19> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_18> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_17> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_16> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_15> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_14> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_13> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_12> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_11> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_10> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_9> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_8> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_7> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_6> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_5> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_4> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_3> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_2> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<5>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p1_5>
+   Output signal of FDE instance <c1/stor_5>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<4>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p1_4>
+   Output signal of FDE instance <c1/stor_4>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<3>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p1_3>
+   Output signal of FDE instance <c1/stor_3>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<2>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p1_2>
+   Output signal of FDE instance <c1/stor_2>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<1>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p1_1>
+   Output signal of FDE instance <c1/stor_1>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p1_0>
+   Signal <c1/N0> in Unit <count> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<5>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p2_5>
+   Output signal of FDE instance <c2/stor_5>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<4>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p2_4>
+   Output signal of FDE instance <c2/stor_4>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<3>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p2_3>
+   Output signal of FDE instance <c2/stor_3>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<2>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p2_2>
+   Output signal of FDE instance <c2/stor_2>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<1>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p2_1>
+   Output signal of FDE instance <c2/stor_1>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p2_0>
+   Signal <c2/N0> in Unit <count> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<5>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Signal <N0> in Unit <main> is assigned to GND
+   Output signal of FDE instance <c3/stor_5>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<4>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p3_4>
+   Output signal of FDE instance <c3/stor_4>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<3>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p3_3>
+   Output signal of FDE instance <c3/stor_3>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<2>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p3_2>
+   Output signal of FDE instance <c3/stor_2>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<1>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p3_1>
+   Output signal of FDE instance <c3/stor_1>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p3_0>
+   Signal <c3/N0> in Unit <count> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<5>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Signal <N0> in Unit <main> is assigned to GND
+   Output signal of FDE instance <c4/stor_5>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<4>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p4_4>
+   Output signal of FDE instance <c4/stor_4>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<3>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p4_3>
+   Output signal of FDE instance <c4/stor_3>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<2>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p4_2>
+   Output signal of FDE instance <c4/stor_2>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<1>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p4_1>
+   Output signal of FDE instance <c4/stor_1>
+
+ERROR:Xst:528 - Multi-source in Unit <count> on signal <in<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <p4_0>
+   Signal <c4/N0> in Unit <count> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <error_detect> on signal <in<10>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDE instance <c2/out>
+   Output signal of FDE instance <c1/out>
+   Primary input port <data_parity<9>>
+   Primary input port <data_parity<6>>
+   Output signal of FDE instance <c3/out>
+   Primary input port <data_parity<7>>
+   Primary input port <data_parity<3>>
+   Primary input port <data_parity<5>>
+   Output signal of FDE instance <c4/out>
+   Primary input port <data_parity<2>>
+   Primary input port <data_parity<1>>
+   Signal <err/N0> in Unit <error_detect> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <error_detect> on signal <in<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Primary input port <data_parity<0>>
+   Signal <err/N1> in Unit <error_detect> is assigned to VCC
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.80 secs
+ 
+--> 
+
+Total memory usage is 4550052 kilobytes
+
+Number of errors   :   26 (   0 filtered)
+Number of warnings :  104 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+

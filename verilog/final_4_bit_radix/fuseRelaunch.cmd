@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Prakash Saini/Documents/study/hardwareprograming/verilog/final_4_bit_radix/multiply_isim_beh.exe" -prj "C:/Users/Prakash Saini/Documents/study/hardwareprograming/verilog/final_4_bit_radix/multiply_beh.prj" "work.multiply" "work.glbl" 

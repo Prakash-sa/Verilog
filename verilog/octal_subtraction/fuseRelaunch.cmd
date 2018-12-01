@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Prakash Saini/Documents/study/hardwareprograming/verilog/octalsub/octal_isim_beh.exe" -prj "C:/Users/Prakash Saini/Documents/study/hardwareprograming/verilog/octalsub/octal_beh.prj" "work.octal" "work.glbl" 

@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/Prakash Saini/Documents/study/hardwareprograming/verilog/amd/annh.xst" -ofn "C:/Users/Prakash Saini/Documents/study/hardwareprograming/verilog/amd/annh.syr" 
+xst -intstyle ise -ifn "C:/Users/Prakash Saini/Documents/study/hardwareprograming/verilog/amd/annh.xst" -ofn "C:/Users/Prakash Saini/Documents/study/hardwareprograming/verilog/amd/annh.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700a-fg484-4 "annh.ngc" annh.ngd  
+map -intstyle ise -p xc3s700a-fg484-4 -cm area -ir off -pr off -c 100 -o annh_map.ncd annh.ngd annh.pcf 
+par -w -intstyle ise -ol high -t 1 annh_map.ncd annh.ncd annh.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml annh.twx annh.ncd -o annh.twr annh.pcf 

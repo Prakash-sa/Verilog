@@ -1,0 +1,29 @@
+Command line:
+   sr2jk_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  8927
+
+Mon Oct 29 13:46:52 2018
+
+
+ Elaboration Time: 0.21875 sec
+
+ Current Memory Usage: 5983.01 Meg
+
+ Total Signals          : 25
+ Total Nets             : 22
+ Total Signal Drivers   : 11
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 15
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 104
+Total Line Count : 17
+
+ Total Simulation Time: 0.84375 sec
+
+ Current Memory Usage: 5511.11 Meg
+
+Mon Oct 29 13:48:25 2018
+

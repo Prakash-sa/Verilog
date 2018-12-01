@@ -1,0 +1,393 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc3s700a-4-fg484
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "main.v" in library work
+Module <main> compiled
+No errors in compilation
+Analysis of file <"main.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <main> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <main>.
+Module <main> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <main>.
+    Related source file is "main.v".
+WARNING:Xst:1306 - Output <C_out> is never assigned.
+WARNING:Xst:646 - Signal <def2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <def1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <def> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 8-bit latch for signal <O>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit adder for signal <$mux0000>.
+    Found 8-bit comparator equal for signal <O$cmp_eq0000> created at line 42.
+    Found 8-bit comparator greater for signal <O$cmp_gt0000> created at line 31.
+    Found 8-bit comparator less for signal <O$cmp_lt0000> created at line 37.
+    Found 8-bit adder for signal <old_def2_2$add0000> created at line 39.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <main> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 8-bit adder                                           : 3
+# Latches                                              : 1
+ 8-bit latch                                           : 1
+# Comparators                                          : 3
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 8-bit adder                                           : 3
+# Latches                                              : 1
+ 8-bit latch                                           : 1
+# Comparators                                          : 3
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <main> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main.ngr
+Top Level Output File Name         : main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 25
+
+Cell Usage :
+# BELS                             : 113
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 6
+#      LUT2                        : 23
+#      LUT3                        : 18
+#      LUT4                        : 11
+#      MULT_AND                    : 6
+#      MUXCY                       : 30
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 8
+#      LDCP                        : 8
+# IO Buffers                       : 24
+#      IBUF                        : 16
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700afg484-4 
+
+ Number of Slices:                       32  out of   5888     0%  
+ Number of 4 input LUTs:                 59  out of  11776     0%  
+ Number of IOs:                          25
+ Number of bonded IOBs:                  24  out of    372     6%  
+    IOB Flip Flops:                       8
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+O_cmp_eq0000(O_cmp_eq00008137:O)   | NONE(*)(O_0)           | 8     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+O_0__and0000(O_0__and000011:O)     | NONE(O_0)              | 1     |
+O_0__and0001(O_0__and000111:O)     | NONE(O_0)              | 1     |
+O_1__and0000(O_1__and000011:O)     | NONE(O_1)              | 1     |
+O_1__and0001(O_1__and000111:O)     | NONE(O_1)              | 1     |
+O_2__and0000(O_2__and000011:O)     | NONE(O_2)              | 1     |
+O_2__and0001(O_2__and000111:O)     | NONE(O_2)              | 1     |
+O_3__and0000(O_3__and000011:O)     | NONE(O_3)              | 1     |
+O_3__and0001(O_3__and000111:O)     | NONE(O_3)              | 1     |
+O_4__and0000(O_4__and000011:O)     | NONE(O_4)              | 1     |
+O_4__and0001(O_4__and000111:O)     | NONE(O_4)              | 1     |
+O_5__and0000(O_5__and000011:O)     | NONE(O_5)              | 1     |
+O_5__and0001(O_5__and000111:O)     | NONE(O_5)              | 1     |
+O_6__and0000(O_6__and000011:O)     | NONE(O_6)              | 1     |
+O_6__and0001(O_6__and000111:O)     | NONE(O_6)              | 1     |
+O_7__and0000(O_7__and000011:O)     | NONE(O_7)              | 1     |
+O_7__and0001(O_7__and000111:O)     | NONE(O_7)              | 1     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 10.026ns
+   Maximum output required time after clock: 5.668ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'O_cmp_eq0000'
+  Total number of paths / destination ports: 2290 / 8
+-------------------------------------------------------------------------
+Offset:              10.026ns (Levels of Logic = 21)
+  Source:            B<0> (PAD)
+  Destination:       O_7 (LATCH)
+  Destination Clock: O_cmp_eq0000 falling
+
+  Data Path: B<0> to O_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.849   0.812  B_0_IBUF (B_0_IBUF)
+     LUT2:I0->O            1   0.648   0.000  Mcompar_O_cmp_gt0000_lut<0> (Mcompar_O_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  Mcompar_O_cmp_gt0000_cy<0> (Mcompar_O_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_O_cmp_gt0000_cy<1> (Mcompar_O_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_O_cmp_gt0000_cy<2> (Mcompar_O_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_O_cmp_gt0000_cy<3> (Mcompar_O_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_O_cmp_gt0000_cy<4> (Mcompar_O_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_O_cmp_gt0000_cy<5> (Mcompar_O_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_O_cmp_gt0000_cy<6> (Mcompar_O_cmp_gt0000_cy<6>)
+     MUXCY:CI->O          18   0.269   1.211  Mcompar_O_cmp_gt0000_cy<7> (Mcompar_O_cmp_gt0000_cy<7>)
+     LUT2:I0->O            1   0.648   0.563  mux0000_mux0000<7>1 (mux0000_mux0000<7>)
+     LUT3:I0->O            1   0.648   0.000  Madd__mux0000_lut<0> (Madd__mux0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  Madd__mux0000_cy<0> (Madd__mux0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  Madd__mux0000_cy<1> (Madd__mux0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Madd__mux0000_cy<2> (Madd__mux0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Madd__mux0000_cy<3> (Madd__mux0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Madd__mux0000_cy<4> (Madd__mux0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Madd__mux0000_cy<5> (Madd__mux0000_cy<5>)
+     MUXCY:CI->O           0   0.065   0.000  Madd__mux0000_cy<6> (Madd__mux0000_cy<6>)
+     XORCY:CI->O           2   0.844   0.590  Madd__mux0000_xor<7> (_mux0000<7>)
+     LUT3:I0->O            2   0.648   0.000  O_7__and000111 (O_7__and0001)
+     LDCP:D                    0.252          O_7
+    ----------------------------------------
+    Total                     10.026ns (6.850ns logic, 3.176ns route)
+                                       (68.3% logic, 31.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'O_cmp_eq0000'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              5.668ns (Levels of Logic = 1)
+  Source:            O_7 (LATCH)
+  Destination:       O<7> (PAD)
+  Source Clock:      O_cmp_eq0000 falling
+
+  Data Path: O_7 to O<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCP:G->Q             1   0.728   0.420  O_7 (O_7)
+     OBUF:I->O                 4.520          O_7_OBUF (O<7>)
+    ----------------------------------------
+    Total                      5.668ns (5.248ns logic, 0.420ns route)
+                                       (92.6% logic, 7.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.50 secs
+ 
+--> 
+
+Total memory usage is 4550076 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

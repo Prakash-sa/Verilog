@@ -1,0 +1,29 @@
+Command line:
+   d_flip_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50405
+
+Tue Oct 23 12:53:41 2018
+
+
+ Elaboration Time: 0.265625 sec
+
+ Current Memory Usage: 5828.87 Meg
+
+ Total Signals          : 15
+ Total Nets             : 16
+ Total Signal Drivers   : 6
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 8
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 97
+Total Line Count : 17
+
+ Total Simulation Time: 0.328125 sec
+
+ Current Memory Usage: 5199.69 Meg
+
+Tue Oct 23 12:55:43 2018
+

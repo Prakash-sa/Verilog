@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Prakash Saini/Documents/study/hardwareprograming/verilog/apuv/bbbhgh_isim_beh.exe" -prj "C:/Users/Prakash Saini/Documents/study/hardwareprograming/verilog/apuv/bbbhgh_beh.prj" "work.bbbhgh" "work.glbl" 

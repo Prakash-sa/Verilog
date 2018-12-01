@@ -1,0 +1,29 @@
+Command line:
+   boothmulitplier_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  5933
+
+Mon Nov 19 15:43:59 2018
+
+
+ Elaboration Time: 0.265625 sec
+
+ Current Memory Usage: 5984.55 Meg
+
+ Total Signals          : 25
+ Total Nets             : 112
+ Total Signal Drivers   : 11
+ Total Blocks           : 6
+ Total Primitive Blocks : 5
+ Total Processes        : 16
+ Total Traceable Variables  : 22
+ Total Scalar Nets and Variables : 256
+Total Line Count : 91
+
+ Total Simulation Time: 0.265625 sec
+
+ Current Memory Usage: 5355.37 Meg
+
+Mon Nov 19 15:56:13 2018
+
